@@ -13,6 +13,7 @@
     <Title>Penguin</Title>
     <PublishAot>False</PublishAot>
     <PublishTrimmed>False</PublishTrimmed>
+    <StartupObject>Penguin.Bot</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>

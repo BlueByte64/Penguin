@@ -10,14 +10,14 @@ using DSharpPlus.SlashCommands;
 using Penguin.Boot;
 using DSharpPlus.Interactivity;
 
-namespace Penguin.Source
+namespace Penguin
 {
     internal class Bot
     {
         private static DiscordClient Client { get; set; }
         private static SlashCommandsExtension SlashCommandsExtension { get; set; }
         private static InteractivityExtension InteractivityExtension { get; set; }
-        static async void Main(string[] args)
+        static async Task Main(string[] args)
         {
             try
             {
