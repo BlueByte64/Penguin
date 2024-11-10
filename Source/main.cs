@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using DSharpPlus.SlashCommands;
 using Penguin.Boot;
 using DSharpPlus.Interactivity;
+using DSharpPlus.EventArgs;
 
 namespace Penguin
 {
@@ -40,7 +41,7 @@ namespace Penguin
                 Console.WriteLine("Something seems wrong.. try checking your token on Data.json file and open the program again");
             }
         }
-        private static Task Client_Ready(DiscordClient sender, DSharpPlus.EventArgs.ReadyEventArgs args)
+        private static Task Client_Ready(DiscordClient sender, ReadyEventArgs args)
         {
             return Task.CompletedTask;
         }
