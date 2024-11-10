@@ -23,7 +23,7 @@ namespace Penguin
             try
             {
                 JsonReader jsonReader = new JsonReader();
-                var discordConfig = new DiscordConfiguration()
+                DiscordConfiguration discordConfig = new DiscordConfiguration()
                 {
                     Intents = DiscordIntents.All,
                     Token = jsonReader.token,
