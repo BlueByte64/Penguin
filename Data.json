@@ -1,11 +1,5 @@
 {
     "DiscordBot": {
-        "Token": "token", //Replace this with your token
-    }
-    "Settings": {
-
-    }
-    "Data": {
-
+        "Token": "token"
     }
 }
