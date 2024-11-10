@@ -17,7 +17,7 @@ namespace Penguin
         private static DiscordClient Client { get; set; }
         private static SlashCommandsExtension SlashCommandsExtension { get; set; }
         private static InteractivityExtension InteractivityExtension { get; set; }
-        static void Main(string[] args)
+        static async void Main(string[] args)
         {
             try
             {
@@ -31,6 +31,9 @@ namespace Penguin
                 };
                 Client = new DiscordClient(discordConfig);
                 Client.Ready += Client_Ready;
+
+                await Client.ConnectAsync();
+                await Task.Delay(1000);
             }
             catch (Exception E) 
             {
