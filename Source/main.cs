@@ -28,7 +28,7 @@ namespace Penguin
                     Intents = DiscordIntents.All,
                     Token = jsonReader.token,
                     TokenType = TokenType.Bot,
-                    AutoReconnect = true,
+                    AutoReconnect = true
                 };
                 Client = new DiscordClient(discordConfig);
                 Client.Ready += Client_Ready;

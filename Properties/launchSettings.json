@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Penguin": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
