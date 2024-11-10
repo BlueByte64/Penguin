@@ -10,7 +10,7 @@ using DSharpPlus.SlashCommands;
 using Penguin.Boot;
 using DSharpPlus.Interactivity;
 
-namespace Penguin
+namespace Penguin.Source
 {
     internal class Bot
     {
@@ -33,9 +33,9 @@ namespace Penguin
                 Client.Ready += Client_Ready;
 
                 await Client.ConnectAsync();
-                await Task.Delay(1000);
+                await Task.Delay(-1);
             }
-            catch (Exception E) 
+            catch (Exception E)
             {
                 Console.WriteLine("Something seems wrong.. try checking your token on Data.json file and open the program again");
             }
