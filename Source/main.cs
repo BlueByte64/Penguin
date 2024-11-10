@@ -10,6 +10,7 @@ using DSharpPlus.SlashCommands;
 using Penguin.Boot;
 using DSharpPlus.Interactivity;
 using DSharpPlus.EventArgs;
+using DSharpPlus.CommandsNext;
 
 namespace Penguin
 {
@@ -17,6 +18,7 @@ namespace Penguin
     {
         private static DiscordClient Client { get; set; }
         private static SlashCommandsExtension SlashCommandsExtension { get; set; }
+        private static CommandsNextExtension CommandsNextExtension { get; set; }
         private static InteractivityExtension InteractivityExtension { get; set; }
         static async Task Main(string[] args)
         {
@@ -30,16 +32,16 @@ namespace Penguin
                     TokenType = TokenType.Bot,
                     AutoReconnect = true
                 };
+
                 Client = new DiscordClient(discordConfig);
                 Client.Ready += Client_Ready;
-
-                await Client.ConnectAsync();
-                await Task.Delay(-1);
             }
             catch (Exception E)
             {
                 Console.WriteLine("Something seems wrong.. try checking your token on Data.json file and open the program again");
             }
+            await Client.ConnectAsync();
+            await Task.Delay(-1);
         }
         private static Task Client_Ready(DiscordClient sender, ReadyEventArgs args)
         {
